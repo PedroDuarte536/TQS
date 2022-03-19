@@ -1,10 +1,11 @@
 package com.tqs.lab2.ex1;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -34,7 +35,7 @@ public class StocksPortfolioTest {
     double result = portfolio.getTotalValue();
 
     // 5. Verify the result (assert) and the use of the mock (verify)
-    assertEquals(14.0, result);
+    assertThat(result, is(14.0));
     verify(market, times(2)).lookUpPrice(anyString());
 
   }
