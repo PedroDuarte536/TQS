@@ -7,7 +7,9 @@ import com.tqs.lab3.ex2.lab3_2.data.Car;
 import com.tqs.lab3.ex2.lab3_2.data.CarRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CarManagerService {
   
   @Autowired CarRepository carRepository;
